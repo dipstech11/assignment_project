@@ -1,0 +1,35 @@
+body {
+
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  font-family: "montserrat";
+  background-image: linear-gradient(125deg, #2c3e50, #8e44ad, #e67e22, #16a085 ,#e74c3c);
+  background-repeat: no-repeat;
+  background-size: 500%;
+  animation: bganimation 5s infinite;
+
+  /** center the text  **/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@keyframes bganimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

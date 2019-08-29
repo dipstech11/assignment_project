@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<ol class="list list-view-filter">
+<h1>User List</h1>
+  {% if user_list %}
+    {% for user in user_list %}
+      <li><a href="{% url 'user_detail' pk=user.pk %}">{{user.username}}</a> </li>
+    {% endfor %}
+
+  {% else %}
+    <p>There are no User in the library.</p>
+  {% endif %}
+</ol>
+{% endblock %}

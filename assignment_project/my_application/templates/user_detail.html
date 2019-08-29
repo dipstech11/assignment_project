@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}User Detail{% endblock %}
+{% block content %}
+<div class="loader-container" id="loader-container">
+	<div class="loading-wrapper">
+		<div class="image-wrap">
+			<img src="https://img.icons8.com/bubbles/2x/user.png" alt="deepak">
+		</div>
+
+		<h3>{{ user.username }}</h3>
+    <p >More Detail will come from DB as we store more data</p>
+
+
+	</div>
+  <button class="btn draw-border"><a href="{% url 'home' %}">Home</a></button>
+  <button class="btn draw-border"><a href="{% url 'logout' %}">Logout</a></button>
+</div>
+
+
+{% endblock %}

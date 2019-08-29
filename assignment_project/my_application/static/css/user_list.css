@@ -1,0 +1,39 @@
+
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin-left: -100px;
+  margin-top : 350px;
+}
+
+li {
+  background-color: #1f364d;
+  color: white;
+  border-radius: 3px;
+  margin-bottom: 12px;
+  transition: 0.3s;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+.list.list-view-filter {
+  flex-direction: column;
+}
+
+.list.list-view-filter li {
+  padding: 10px;
+}
+
+.list.grid-view-filter {
+  flex-flow: row wrap;
+}
+
+.list.grid-view-filter li {
+  width: calc(50% - 210px);
+  padding: 100px;
+  margin-right: 10px;
+  text-align: center;
+
+}

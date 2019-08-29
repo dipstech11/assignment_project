@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<form class="login-form" method="post">
+    {% csrf_token %}
+    <div class="txtb">
+      <input  placeholder="Username" type="text" name="username" >
+    </div>
+
+    <div class="txtb">
+      <input  placeholder="Password" name="password1" type="password">
+    </div>
+
+    <div class="txtb">
+      <input  placeholder="Confirm Password" name=password2 type="password">
+    </div>
+
+    <input type="submit" class="logbtn" value="SignUp">
+
+    <div class="bottom-text">
+      Already have a account? <a href="{% url 'login' %}">Login</a>
+    </div>
+  </form>
+
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% load static %}
+<header class="header-section clearfix">
+           <div class="logo float-left">
+             <a href="/">
+                 <img src="{% static 'img/logo.svg' %}" />
+             </a>
+               <span class="header-bars">
+                   <span></span>
+                   <span></span>
+                   <span></span>
+               </span>
+
+           </div>
+           <div class="logo-text float-left">
+             Deal Tracker
+
+            </div>
+            <ul class="header-links no-list-style float-right">
+             {% if user.is_authenticated %}
+              <li class="float-left">
+                  <p>Welcome,   <b>{{user.username}}</b></p>
+              </li>
+              {% endif %}
+
+               <li class="float-left">
+
+             {% if user.is_authenticated %}
+                   <a href="{% url 'logout' %}?next=/">Logout</a>
+
+             {% else %}
+                {% if  request.path  == "/login/" %}
+                   <!-- <a href="{% url 'registration_register' %}">Sign Up</a> -->
+                {% else %}
+                  <a href="{% url 'login' %}">Login</a>
+                {% endif %}
+             {% endif %}
+               </li>
+           </ul>
+       </header>
